@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pizzacraft - Builder Pattern Demo</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #00c2ea 0%, #76b4a2 100%);
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+
+    .header {
+      background: linear-gradient(45deg, #f76b6b, #ee5a24);
+      color: white;
+      padding: 30px;
+      text-align: center;
+    }
+
+    .header h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+
+    .header p {
+      font-size: 1.2em;
+    }
+
+    .menu {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 30px;
+    }
+
+    .card {
+      background: #fafafa;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #555;
+      font-size: 0.95em;
+      margin-bottom: 10px;
+    }
+
+    .card button {
+      background: linear-gradient(45deg, #f76b6b, #ee5a24);
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .card button:hover {
+      background: linear-gradient(45deg, #ee5a24, #f76b6b);
+    }
+
+    .footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>PizzaCraft</h1>
+      <p>Delicious handcrafted pizzas made fresh!</p>
+    </div>
+
+    <div class="menu">
+      <div class="card">
+        <img src="pizza1.jpg" alt="Margherita">
+        <h3>Margherita</h3>
+        <p>Classic delight with fresh mozzarella & basil.</p>
+        <button>Order Now</button>
+      </div>
+
+      <div class="card">
+        <img src="pizza2.jpg" alt="Pepperoni">
+        <h3>Pepperoni</h3>
+        <p>Loaded with spicy pepperoni and gooey cheese.</p>
+        <button>Order Now</button>
+      </div>
+
+      <div class="card">
+        <img src="pizza3.jpg" alt="Veggie Supreme">
+        <h3>Veggie Supreme</h3>
+        <p>A colorful mix of veggies on a cheesy crust.</p>
+        <button>Order Now</button>
+      </div>
+    </div>
+
+    <div class="footer">
+      &copy; 2025 PizzaCraft. All Rights Reserved.
+    </div>
+  </div>
+</body>
+</html>
